@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux - Apprenez le C#</title>
+    <link href="../CSS/Main.CSS" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <h1>Les tableaux du langage C#</h1>
+</header>
+<nav>
+    <ul>
+        <li><p>Apprenez le C#</p></li>
+        <li><a href="#tabS">Tableaux simples</a></li>
+        <li><a href="#tabM">Tableaux à deux dimensions </a></li>
+        <li><a href="#tabD">Tableau de tableaux</a></li>
+        
+    </ul>
+</nav>
+
+<div class="content">
+<main class="main">   
+        <ol>
+            <section>
+                <header> 
+                    <li><h2 id="tabS"> Tableaux simples </h2></li>
+                </header>
+                <p>
+                    Un tableau ("array" en anglais) est un objet permettant de rassembler sous un même identificateur des données de même type. Sa déclaration est la suivante : type[] nom = new type[n]; où n est le nombre de données que peut contenir le tableau.
+                    <br>En fait, un tableau est même un objet, c'est-à-dire qu'on y accède via une référence. 
+                    De ce fait, un tableau déclaré sans être initialisé vaut null.
+
+                    <br>Voici comment créer un tableau de quatre entiers :
+
+                    <code>int[] myArray = new int[4];</code>
+                    <br>On a déclaré notre tableau, et on l'a initialisé sans préciser de valeur, 
+                    donc avec la valeur par défaut d'un entier, à savoir 0.
+
+                    <br>Vous pouvez très bien préciser les valeurs que vous voulez mettre dans votre tableau.
+                    <br>Voici comment créer un tableau contenant les entiers 10, 20, 30 et 40 :
+
+                    <br><code>int[] myArray = new int[] {10, 20, 30, 40};</code>
+                    <br>Vous remarquerez que vous ne devez plus donner de taille à votre tableau : 
+                    vous l'avez rempli avec quatre entiers donc sa taille est 4.
+
+                    <br>Pour simplifier, écrivez :
+
+                    <code>int[] myArray = {10, 20, 30, 40};</code>
+                    <br>nom[i] désigne la donnée noi, où i appartient à l'intervalle [0; n-1]. 
+                    Si i n'appartient pas à cet intervalle, ce code générera une erreur. Ainsi, dans cet exemple :
+                    <ul>
+                        <li>myArray[0] vaut 10 ;</li>
+                            
+    
+                        <li>myArray[1] vaut 20 ;</li>
+                            
+    
+                        <li>myArray[2] vaut 30 ;</li>
+                            
+    
+                        <li>myArray[3] vaut 40 ;</li>
+
+                        <li>myArray[4] est inaccessible. Eh oui, là nous sommes en dehors du tableau.</li>
+                            
+                    </ul>
+
+                    <br>Dans le 1er exemple, nous n'avons que créé le tableau, 
+                    sans affecter de valeur particulière à ses éléments (myArray[0], myArray[1], ...) 
+                    qui valent donc tous 0 (valeur par défaut d'un entier).
+                </p>
+            </section>
+
+            <section>
+                <header> 
+                    <li><h2 id="tabM">Tableaux à deux dimensions </h2></li>
+                </header>
+                <p>
+                    Un tableau à deux dimensions se déclare de la manière suivante : 
+                    <br><code>type[,] nom = new type[n, m]; </code>
+                    où n est le nombre de lignes et m le nombre de colonnes.
+                    <br>Voici comment déclarer un tableau à deux dimensions contenant des réels :
+                    <pre>
+    double[,] myArray = new double[,]
+        {
+            {0.1, 0.5},
+            {1.3, 1.7}
+        };
+                    </pre>
+                    Le point et la virgule sont inversés en français et en anglais. 
+                    N'écrivez donc pas 0,1 mais 0.1 (de même pour les autres nombres).
+                    
+                    <br>Pour simplifier, écrivez :
+                    <pre>
+    double[,] myArray =
+        {
+            {0.1, 0.5},
+            {1.3, 1.7}
+        };
+                    </pre>
+                    Par soucis de clarté, j'ai écrit le code sur plusieurs lignes.
+                    Je vous conseille fortement de faire de même, cela permet de se relire plus facilement.
+                    
+                    <br>nom[i, j] désigne l'élément j de la ligne i du tableau nom. Ainsi, dans cet exemple :
+
+                    <ul>
+                        <li>myArray[0, 0] vaut 0.1 en notation anglaise (soit 0,1 en notation française) ;</li>
+                            
+    
+                        <li>myArray[0, 1] vaut 0.5 en notation anglaise (soit 0,5 en notation française) ;</li>
+                            
+    
+                        <li>myArray[1, 0] vaut 1.3 en notation anglaise (soit 1,3 en notation française) ;</li>
+                            
+    
+                        <li>myArray[1, 1] vaut 1.7 en notation anglaise (soit 1,7 en notation française) ;</li>
+
+                        <li>myArray[2, 0] est inaccessible. Eh oui, là encore nous sommes en dehors du tableau.</li>
+                            
+                    </ul>
+ 
+                    <br><strong>Ne confondez pas avec myArray[i][j] !</strong> 
+                    Cela voudrait dire que myArray est un tableau simple et qu'il contient des tableaux simples. 
+                    Ainsi myArray[i][j] représente la j-ième case du i-ième tableau stocké dans myArray.
+                </p>
+        
+            </section>
+
+            <section>
+                <header> 
+                    <li><h2 id="tabD">Tableau de tableaux </h2></li>
+                </header>
+                <p>
+                    Un tableau de tableaux se déclare de la manière suivante :
+                    <br><code>type[][] nom = new type[n][]; </code>
+                    où n est le nombre de lignes.
+                    <br>Ici on ne spécifie pas de nombre de colonnes 
+                    car chaque tableau contenu dans ce "méga-tableau" possède un nombre de colonnes qui lui est propre.
+                    <br>Voici comment déclarer un tableau de tableaux :
+                    <pre>
+    int[][] myIntArray = new int[2][];
+    myIntArray[0] = new int[5];
+    myIntArray[0][1] = 42;
+                    </pre>
+                      
+                    <ul>
+                        <li>ligne no1 : On crée un tableau, nommé myIntArray, qui va pouvoir contenir 2 tableaux d'entiers.
+                            À ce stade, myIntArray[0] et myIntArray[1] valent null : 
+                            ils ne référencent pas encore du contenu.
+                        </li>
+                            
+    
+                        <li>ligne no2 : On crée le 1er tableau d'entiers avec 5 colonnes. 
+                            myIntArray[0] ne vaut plus null mais contient la référence vers son contenu. 
+                            myIntArray[0][0] jusqu'à myIntArray[4] valent 0 (valeur par défaut d'un entier).
+                        </li>
+                            
+    
+                        <li>ligne no3 : On affecte la 2e case du 1er tableau avec la valeur 42.</li>
+                            
+                    </ul>
+                    <br>Pour bien que vous compreniez, voici l'arborescence de ce tableau de tableaux :
+
+                    <figure class="figure_center">
+                        <img src="../Images/tableaux_C.png" alt="tableau de tableaux">
+                        <figcaption>Arborescence du tableau de tableaux.</figcaption>
+                    </figure> 
+
+                    Vous pouvez aussi créer un tableau à partir de variables représentant des tableaux. 
+                    <br>Voici un exemple pour créer un tableau de tableaux qui contiennent des chaînes de caractères :
+                    <pre>
+    string[] firstnameArray =
+        {
+	        "Matt",
+	        "Tim",
+	        "James"
+        };
+
+    string[] surnameArray =
+        {
+	        "Johnson",
+	        "Smith"
+        };
+
+    string[][] myArray =
+        {
+	        firstnameArray,
+	        surnameArray
+        };
+                    </pre>
+                    Chaque élément myArray[i] est une référence de tableau à une dimension. 
+                    Si vous ne faites que déclarer le tableau, ces références ne sont pas initialisées et elles valent null.
+                    <br>C'est le cas dans le code suivant :
+                    <code>int[][] myArrayOfIntArrays = new int[5][];</code>
+                    <br>Après exécution, myArrayOfIntArrays[0] vaut null (de même pour les autres éléments).
+                </p>
+            
+            </section>
+        </ol>
+
+        <a href="./Conditions_boucles.html" class="backBtn"> <i class="arrow left"></i> Les conditions et boucles</a>
+        <a href="./Quizz.html" class="nextBtn">Quizz <i class="arrow right"></i> </a>
+</main> 
+<aside class="aside">
+    <header><h2>Table des matières</h2></header>
+    <ol>
+        <li><a href="../index.html">  Accueil</a></li>
+        <li><a href="./Les_variables.html">1.Les variables</a></li>
+        <li><a href="./Les_operateurs.html">2.Les operateurs</a></li>
+        <li><a href="./Conditions_boucles.html">3.Les conditions et boucles </a></li>
+        <li><a href="./Les_tableaux.html"><strong> &gt 4.Les Les tableaux</strong></a></li>
+        <li><a href="./Quizz.html">5.Quizz</a></li>
+    </ol>
+
+</aside>
+</div>
+<footer class="footer"> 
+    <header><h3>Auteur:</h3></header>
+    <address>AMMAR BOUDJELAL Safi Eddine/ Mail: ammarboudjelal.safieddine@gmail.com</address>
+</footer>
+</body>
+</html>

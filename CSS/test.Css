@@ -1,0 +1,195 @@
+fieldset{
+    padding: 40px;
+    margin-bottom: 15px;
+    box-shadow: 0 0px 5px rgb(0 0 0 / 20%);
+    border: none;
+}
+
+legend.legend{
+    text-align: center;
+    padding: 22px 70px;
+    background-color: #3C99DC;
+
+    font-weight: 600;
+    font-size: 22px;
+    border-radius: 10px ; 
+    border-color: #2f97e2;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 0px 5px rgb(0 0 0 / 35%);
+    color: #fff;
+       
+}
+.ligne{                                     /*     */
+    padding: 10px 0px 20px 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow: 0 0px 3px rgb(0 0 0 / 35%);
+}
+
+label{
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+
+.content{                      
+    margin: 40px 120px;
+}
+
+
+p{
+    font-size: 17px;
+    font-family: sans-serif;
+}
+a {
+    width: 25%;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 22px;
+    margin-left: 35%;
+    color: #3C99DC;
+    background-color: #fff;
+
+    text-decoration: none;  
+    padding: 14px 0px; 
+    display: block;
+    margin-top: 40px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #3C99DC;
+}
+a:hover{
+    box-shadow: 0 4px 3px rgb(0 0 0 / 42%);
+    
+}
+
+.arrow {                            /*class qui permet de creer une fleche*/
+    border: solid #3C99DC;
+    border-width: 0 3px 3px 0;      
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    top: -2px;
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: relative;
+    right: 20px;
+}
+  
+
+
+input[type=radio]{
+    margin-left: 40px;
+}
+
+.button{                        /*style du button d'envoi*/
+    
+    width: 25%;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 22px;
+
+    color: #3C99DC;
+    background-color: #fff;
+
+    text-decoration: none;  
+    padding: 14px 30px; 
+    margin-left: 35%;
+    margin-bottom: 40px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #3C99DC;
+    
+
+}
+.button:hover {                         /* le bouton réagit au survol de la souris */
+
+    background-color: #3C99DC;
+    color: white;
+    box-shadow: 0 4px 3px rgb(0 0 0 / 42%);
+}
+.button:focus{
+    border-color: #3C99DC;
+    outline:none;
+}
+
+
+.juste{                             /*style des reponse juste apres envoi*/
+    border-style: solid;
+    border-width: 1px;
+    border:green;
+    padding:10px;
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: lightgreen;
+    text-align: center;                    
+
+}
+.fausse{                            /*style des reponse fausse apres envoi*/
+    border-style: solid;
+    border-width: 1px;
+    border:red;
+    padding:10px;
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(255, 91, 91);
+    text-align: center;
+}
+
+
+.noteT{
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-top: 50px;
+    text-align: center;
+}
+span{
+    font-size: 28px;
+    color: #3C99DC;
+}
+
+@media screen and (max-width: 800px)
+        {
+            body{
+                padding: 0px;
+                margin: 10px;
+            }
+            .content{                      
+                margin: 0px;
+            }
+
+            .ligne {
+                width: 100%;
+                margin-top: 6px;
+                display: block;
+            }
+
+            .button{ 
+                margin: 0px 0px 40px 0px;
+                width: 100%;
+            }
+            a {
+                margin: 0px;
+                width: 100%;
+                
+            }
+            .juste{
+                width: 100%;
+                margin-right: 0px;
+            }
+            .fausse{
+                width: 100%;
+                margin-right: 0px;
+            }
+
+        }

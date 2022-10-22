@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les variables - Apprenez le C#</title>
+    <link href="../CSS/Main.CSS" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Les Variables Du Langage <strong>C#</strong></h1>
+</header>
+<nav>       <!-- Pour la navigation dans la page-->
+    <ul>
+        <li><p>Apprenez le C#</p></li>
+        <li class="niveau2"><a href="#var">Variables</a>
+            <ul>
+                <div class="content-niveau2">
+                    <li>
+                        <a href="#nomvar">Nomation des variables</a>
+                        <a href="#typevar">Types des variables</a>
+                    </li>
+                </div>
+            </ul>
+        
+        </li>
+        <li class="niveau2"><a href="#usevar">Utilisation des varilables</a>
+            <ul>
+                <div class="content-niveau2">  
+                    <li>
+                        <a href="#decvar">Declaration</a>
+                        <a href="#defvar">Valeur par defaut</a>
+                        <a href="#attval">Attribuer une valeur</a>
+                    </li>
+                </div>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="content">
+<main class="main">
+    <ol> <!-- Liste des grandes titres-->
+        <section>
+            <header> 
+                <li><h2 id="var">1.Variables :</h2></li>
+            </header>
+            <p>
+                Comme son nom l'indique, une variable est quelque chose qui varie. Sa représentation la plus courante est une boîte qui contient des informations.<br>
+
+                Les deux éléments essentiels d'une variable sont sa <strong>valeur</strong> (et donc son type) et son <strong>nom</strong>. Nous parlerons des types juste après.
+                Le nom, c'est vous qui le fixez ; il est unique et permet de n'identifier qu'une seule variable. <br>
+                La valeur, quant à elle, peut être à peu près n'importe quoi, et peut être modifiée autant que l'on veut.
+                Pour schématiser, la variable est la boîte, son nom est écrit dessus, sa valeur est ce qu'elle contient,
+                et son type est la forme de la boîte.
+            </p>
+            <ol> <!--Debut des sous listes du titre variables-->
+                <section>
+                    <header> 
+                        <li><h3 id="nomvar"> 1.1.Nomation des variables :</h3></li>
+                    </header>
+                    <p>
+                        <ul>
+                        En C#,
+
+                        <li>le nom d'une variable est obligatoirement écrit avec des caractères alphanumériques (de préférence sans accent),
+                             ainsi que le underscore '_' (sans les apostrophes).
+                        </li>
+                        <li> le nom doit forcément commencer par une lettre (underscore '_' compris).
+                        </li>
+                        <li>le nom ne doit pas être le nom d'un type ou d'une classe déjà définis,
+                             d'un mot-clef du langage, ...(il ne doit pas être déjà pris). Bref, il ne faut pas que la confusion soit possible.
+                        </li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <header> 
+                    <li><h3 id="typevar">1.2.Types des variables :</h3></li>
+                    </header>
+                    <p>
+                        En C#, les variables possèdent un <strong>type</strong>  qui précise la nature des informations stockées.
+                        L'inconvénient que remarquent surtout ceux qui ont l'habitude d'un langage sans typage (tel que le PHP) est le manque de "souplesse" : certaines choses peuvent être écrites plus simplement dans ce langage qu'en C#.
+                        Par exemple, le chiffre 2 et sa représentation en caractère '2' peuvent éventuellement être utilisés l'un à la place de l'autre, ce qui n'est pas le cas en C#.
+                        L'avantage est que vous savez exactement ce que vous manipulez. Cela permet d'éviter certaines erreurs, de bien comprendre ce que votre code fait, et de pouvoir l'optimiser.
+                        C'est une habitude à prendre ; ensuite vous redouterez le "laxisme" de certains langages !
+
+                        <br>Le C# dispose de types de base qui permettent de représenter des informations dont la nature est courante, comme des nombres, des caractères et des chaînes de caractères. Il existe un nombre infini de types étant donné que l'on peut construire un nouveau type à partir de ceux qui existent déjà. C'est ce que nous verrons quand nous étudierons les classes.<br>
+
+                        <br>Voici un tableau exhaustif contenant les types de base du C# :
+                    </p>
+                    <table class="table">
+                        <tr>
+                            <th>Type C#</th>
+                            <td><strong>Signification</strong></td>
+                        </tr>
+                        <tr>
+                            <th>char</th>
+                            <td>character (caractère)</td>
+                        </tr>
+                        <tr>
+                            <th>string</th>
+                            <td>chaîne de caractères</td>
+                        </tr>
+                        <tr>
+                            <th>int	</th>
+                            <td> integer (nombre entier)</td>
+                        </tr>
+                         <tr>
+                            <th>long</th>
+                            <td>nombre entier long</td>
+                        </tr>
+                        <tr>
+                            <th>byte</th>
+                            <td>octet</td>
+                        </tr>
+                        <tr>
+                            <th>short</th>
+                            <td>nombre entier court</td>
+                        </tr>
+                        <tr>
+                            <th>float</th>
+                            <td>flottant (nombre réel)</td>
+                        </tr>
+                        <tr>
+                            <th>double</th>
+                            <td>double flottant (nombre réel)</td>
+                        </tr>
+                        <tr>
+                            <th>bool</th>
+                            <td>booléen</td>
+                        </tr>
+                        <tr>
+                            <th>object</th>
+                            <td>référence d'objet</td>
+                        </tr>
+                    </table>
+                    
+                </section>
+            </ol> <!--Fin des sous listes-->
+        </section>
+        <section>
+            <header> 
+                <li><h2 id="usevar">2.Utilisation des varilables :</h2></li>
+            </header>
+            <ol><!--Debut des sous listes du titre Utilisation-->
+                <section>
+                    <header> 
+                        <li><h3 id="decvar">2.1.Declaration :</h3></li>
+                    </header>
+                    <p>
+                        Pour utiliser une variable, il faut d'abord la déclarer (la créer) : 
+                        on réserve une partie de la mémoire pour cette variable. On spécifie ce qu'elle représentera 
+                        (un entier, un caractère, une image, ...) en indiquant son type.
+                        La syntaxe est : <code>type nom;</code> <br>
+                        Faites attention à ne <strong> pas oublier le point-virgule</strong>, sans quoi Visual Studio ne pourra pas compiler votre code.
+                    </p>
+
+                </section>
+
+                <section>
+                    <header> <li><h3 id="defvar">2.2.Valeur par defaut :</h3></li></header>
+                    <p>
+
+                        En C/C++, une fois déclarée, la variable dispose d'un emplacement en mémoire et elle vaut ce qui s'y trouve.
+                        <ul>
+                            <li>la valeur par défaut de tout type numérique est 0, adapté au type
+                                (0.0 pour un float ou un double) ;
+                            </li>
+                            <li>la valeur par défaut d'une chaîne de caractères (string) est null, 
+                                et non pas la chaîne vide, qui est représentée par string.Empty ou encore "" ;
+                            </li>
+                            <li>la valeur par défaut d'un caractère (char) est '\0'.
+                            </li>
+                    </ul>
+
+                    </p>
+
+                </section>
+                <section>
+                    <header> <li><h3 id="attval">2.3.Attribuer une valeur :</h3></li></header>
+                    <p>
+                        Voici comment créer un entier nommé myInteger et ayant la valeur 3 :
+                        <pre><code>                            
+    int myInteger;
+    myInteger = 3;</code>                           
+                        </pre>
+                        Pour raccourcir, écrivez : <code> int myInteger = 3;</code>.<br>
+                        Cela revient exactement au même : on rassemble la déclaration et l'initialisation. Vous conviendrez que c'est mieux car c'est plus concis.
+                        
+                        <br><br>Voici comment créer une chaîne de caractères valant "Hello world!" et un caractère ("char" signifie "caractère" en anglais) valant 'a' :
+                        <pre><code>                           
+    string myString = "Hello world!";
+    char myChar = 'a';</code>
+                        </pre>
+                    </p>
+
+                </section>
+            
+            </ol><!--Fin des sous listes du titre Utilisation-->
+        </section>
+
+        <a href="../index.html" class="backBtn"> <i class="arrow left"></i> Accueil </a> <!-- la balise i pas pour l'italic mais pour l'element technique fleche-->
+        <a href="./Les_operateurs.html" class="nextBtn">Les operateurs <i class="arrow right"></i> </a>    
+
+
+    </ol><!--Fin des listes des grands titre -->
+</main> 
+
+
+
+<aside class="aside">     <!-- Pour la navigation entre les pages-->
+    <header><h2>Table des matières</h2></header>
+    <ol>
+        <li><a href="../index.html">  Accueil</a></li>
+        <li><a href="./Les_variables.html"> <strong> &gt 1.Les variables</strong></a></li>
+        <li><a href="./Les_operateurs.html">2.Les operateurs</a></li>
+        <li><a href="./Conditions_boucles.html">3.Les conditions et boucles</a></li>
+        <li><a href="./Les_tableaux.html">4.Les tableaux</a></li>
+        <li><a href="./Quizz.html">5.Quizz</a></li>
+    </ol>
+
+</aside>
+
+</div>
+
+<footer class="footer"> 
+    <header><h3>Auteur:</h3></header>
+    <address>AMMAR BOUDJELAL Safi Eddine/ Mail: ammarboudjelal.safieddine@gmail.com</address>
+</footer>
+</body>
+</html>

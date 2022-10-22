@@ -1,0 +1,381 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header{    
+    font-family:verdana,sans-serif;
+    font-weight: lighter;
+}
+header h1{
+    background-color: #3C99DC;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0px 50px 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h2,h3{
+    color: #1e88d4;
+    text-decoration-line: underline;
+    margin-top: 0px;
+}
+h4{
+    color: #1e88d4;
+}
+
+
+/* -------------------------Class menu de navigation bar de nav------------------------------------------ */
+nav {
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: #4fc6f1; 
+    box-shadow: 0 0px 30px rgb(0 0 0 / 50%);
+    line-height: 25px;
+       
+    }
+
+nav a {                     /*style des liens de navigation*/
+    display: block;
+    color: #fff;
+    font-family:verdana,sans-serif;
+    text-align: center;
+    padding: 25px 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 15px;
+    text-decoration: none;
+    }
+nav a:hover{                /*l'effet de movement du cursor*/
+    background-color: #fff;
+    color: #3C99DC;
+	font-weight:bold;
+}
+
+nav p{
+    font-size: 25px;
+    
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    
+    color: #fff;
+    font-family:verdana,sans-serif;
+}
+nav ul {
+    list-style-type: none;                
+    margin: 0;
+    padding: 0;
+    }
+nav ul li {
+    float: left;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    }
+
+                        /*---------------- Debut de menu a 2 niveau -------------- */
+nav ul li.niveau2 {
+    display: inline-block;
+    }
+
+.content-niveau2 {                  /*class des liens qui ont un 2eme niveau */
+    display: none;
+    position: absolute;
+    background-color: #4fc6f1;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+.content-niveau2 a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    }
+
+.content-niveau2 a:hover {background-color: #fff;}
+    
+.niveau2:hover .content-niveau2 {
+    display: block;
+    }
+
+/*--------------------------------------------Fin de navigation---------------------------------------------*/
+
+.content{                           /* regler les margins entre les parties main et aside */
+    margin: 60px 120px;
+}
+
+                    /*--------------------------------Style de la partie main---------------------*/
+main.main {
+    float: left;
+    width: 70%;   
+    background-color: #fff;
+    display: block;
+    
+}
+main a{                     /*style des liens ou buttons qui permetre de va et venir entre les pages*/
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 22px;
+
+    color: #3C99DC;
+    background-color: #fff;
+
+    text-decoration: none;  
+    padding: 14px 30px; 
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+}
+main a:hover{
+    
+    box-shadow: 0 4px 3px rgb(0 0 0 / 42%);
+}
+
+.startBtn{                             /* class style du lien commencer la formation */
+    text-align: center;
+    margin-top: 60px;
+    
+}
+
+
+.backBtn{                              /*class style du lien du page precedante */
+    float: left;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.nextBtn{                            /*class style du lien du page suivante*/  
+    float: right;
+    margin-top: 60px;
+    margin-right: 30px;
+}
+                                    /* Debut class des fleches des liens */
+
+.arrow {                            /*class qui permet de creer une fleche*/
+    border: solid #3C99DC;
+    border-width: 0 3px 3px 0;      
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    top: -2px;
+}
+.right {
+    transform: rotate(-45deg);            /*on fait une rotation de la fleche 2D*/
+    -webkit-transform: rotate(-45deg);
+    position: relative;
+    left: 10px;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: relative;
+    right: 10px;
+}
+                                    /* Fin class des fleches des liens */
+
+                /*--------------------------------Fin de la partie main---------------------*/
+
+                /*------------------------style de la partie aside -------------------------- */
+aside.aside {
+    float: right;
+    width: 28%;   
+    background-color: #fff;
+    box-shadow: 0 0px 3px rgb(0 0 0 / 35%);
+    margin-left: 20px;
+}
+aside.aside h2 {
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    background-color: #3C99DC;
+    color: #fff;
+    margin: 0px 0px 10px 0px;
+    padding: 12px;
+    display: block;
+}
+
+aside.aside a{
+    font-family:sans-serif;
+    color: #3a3939;
+    text-decoration: none;      
+    font-size: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+aside.aside a:hover{
+    color: #3C99DC;
+    font-weight: bold;
+}
+aside.aside ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+aside.aside ol li {
+    padding:10px;    
+}
+            /*--------------------------- Fin du la partie aside---------------------------*/
+
+            /* -------style des liste ol et ul dans le main ---------------*/
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol li {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+ul{
+    list-style-type:disc;
+}
+
+
+
+footer{                       /*style du footer*/
+    width: 100%;
+    float:right;
+    padding: 30px;
+    margin-top: 60px;
+    background-color: #3C99DC;
+    color: #fff;
+    text-align: center;
+}
+footer h3{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+section, article{               /*style des sections et articles */
+    font-size: 15px;
+    color: #3e3e3e;
+    padding: 12px;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+
+p{                          /*style des paragraphes */
+    line-height: 18px;
+    color: #3e3e3e;
+}
+
+pre{                        /*style des balises pre et code */
+    background-color: rgb(39, 36, 36);
+    color :#fff;
+    border-radius:5px;
+}
+
+figure{                     /*style des images */
+    text-align: center;
+    font-size: 16px;
+    font-family:verdana,sans-serif;
+    padding: 15px;
+
+}
+figcaption{                 /*style de text en dessus d'image*/
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.firstsection{                /*style du 1ere section de "Bienvenu" de la page d'acceuil*/
+    font-size: 22px;
+    margin-bottom: 0px;
+    
+    box-shadow: 0 0px 3px rgb(0 0 0 / 35%);
+}
+.firstsection p {
+    color: #1e88d4;
+	line-height:22px;
+}
+
+
+
+
+                            /*-----debut style de tableaux------*/
+
+table, th, td {              
+    border: 1px solid rgba(162, 167, 247, 0.89);
+    }
+    th{
+        padding: 15px;
+    }
+    td{
+        padding-left: 4px;
+    }
+.table{
+    text-align: center;
+    width: 70%;
+}
+tr:nth-child(1)                 /*pour colorer le nieme fils du tab*/
+{
+  background-color: #3C99DC;
+  color:#fff;
+}
+                            /*-----Fin style de tableaux------*/
+
+
+@media screen and (max-width: 800px)  /*site responsive au dessus de 800px */
+{
+    .content{
+        margin: 10px 40px;
+    }
+    main.main{
+        width: 100%;
+       
+    }
+    .backBtn{
+        width: 60%;
+        display: block;
+        float: none;
+        margin-left: 15%;
+        margin-top: 10px;
+    }
+    .nextBtn{
+        width: 60%;
+        display: block;
+        float: none;
+        margin-left: 15%;
+        margin-top: 30px;
+    }
+    aside.aside{
+        width: 70%;
+        margin-top: 50px;
+        margin-right: 100px;
+    
+    }
+
+    footer{
+        width: 100%;
+        text-align: center;
+        
+    }
+    nav{
+        width: 100%;
+    }
+
+    .table{
+        width: 100%;
+    }
+    figure{
+        margin-left: 0px;
+        padding-left: 0px;
+        text-align: center;
+        
+    }
+    img{
+        width: 100%;
+    }
+    
+}

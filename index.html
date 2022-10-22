@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprenez le C#</title>
+    <link href="./CSS/Main.CSS" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Formation et apprentissage du langage C#</h1>
+</header>
+<nav>
+    <ul>
+        <li><p>Apprenez le C#</p></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#Cotils">Code et IDE</a></li>
+        <li><a href="#propr">A propos de la formation</a></li>
+        
+    </ul>
+</nav>
+
+<div class="content">
+<main class="main">
+    <section class="firstsection">
+        <p>
+            Bienvenu, Dans cette formation de C#, nous allons découvrir ensemble de choses basiques d'algorithmique en apprenant à programmer en C#.
+            <br>Il y aura bien entendu un test pour vous faire pratiquer, 
+            afin que vous puissiez vous rendre compte de ce que vous êtes capables de faire après avoir lu plusieurs chapitres plus théoriques.
+        </p>
+    </section>
+    <section>
+        <header> 
+            <h2 id="intro"> Introduction</h2>
+        </header>
+            <p>
+                Vous avez entendu parler du langage C, du C++, et voilà qu'on vous présente maintenant le C# !
+                Encore un langage me direz-vous ? Oui, mais pas n'importe lequel !<br>
+
+                Il existe des centaines de langages de programmation,
+                comme le C, le C++, Python, Java... Chacun a ses avantages et défauts. 
+                Le C# (aussi écrit C Sharp et prononcé "cé sharp" voire "ci sharp" à l'anglaise) n'est peut-être qu'un langage de plus à vos yeux,
+                mais il est en fait très important dans le monde de la programmation !
+
+                <br>Alors, Voici quelques caractéristiques de C# :
+            </p>
+                <ul>
+                    <li><strong>Récent</strong> : il a été créé par Microsoft au début des années 2000,
+                        ce qui en fait un langage assez jeune (comparé au C, au C++ et à Java).
+                    </li>
+                    <li><strong>Idéal sous Windows & Windows Phone 7</strong> : c'est le langage recommandé pour développer sous Windows aujourd'hui,
+                        mais on s'en sert aussi pour créer des applications Windows Phone 7, pour Silverlight, ASP...
+                    </li>
+                    <li><strong>Libre </strong>: le langage est ouvert, et on peut s'en servir pour développer des applications sous Linux notamment.
+                        Le fait qu'il soit issu de Microsoft ne l'empêche pas d'avoir son lot d'aficionados dans le monde du libre.
+                    </li>
+                    <li><strong>Inspiré de Java</strong> : même s'il a ses spécificités,
+                        il ressemble globalement plus au Java qu'au C ou au C++ contrairement à ce que son nom pourrait laisser penser.
+                    </li>
+                    <li><strong>Associé au framework .NET </strong>: un langage seul comme le C# ne permet pas de faire grand chose.
+                     On l'associe en général à une boîte à outils que l'on appelle le framework .NET
+                    (aussi écrit Dot NET et prononcé "dotte nette") qui offre toutes les possibilités que l'on peut imaginer : accès réseau, création de fenêtres, appel à une base de données...
+                    </li>
+                    <li><strong>Apprécié en entreprise</strong> : si Java reste un des langages les plus utilisés en entreprise,
+                        C# se présente comme un sérieux challenger. C'est aujourd'hui une compétence recherchée en entreprise.
+                    </li>
+                </ul>      
+            
+    </section>
+    <section>
+        <header> 
+            <h2 id="Cotils"> Code et IDE</h2>
+        </header>
+        <p>
+            Un IDE ("Environnement de Développement Intégré", en français) est un éditeur de texte 
+            qui propose toute une panoplie d'outils pour développer des logiciels.
+            S'il est en théorie possible de programmer avec n'importe quel éditeur de texte,
+            les IDE nous simplifient beaucoup la vie en colorant
+            le code et en offrant des outils pour automatiser certaines tâches répétitives. 
+
+            Nous allons utiliser l'IDE associé au .NET, à savoir Visual Studio.
+            Il ne fonctionne que sous Windows. Nous n'avons pas nécessairement besoin de la version complète,
+            qui de surcroît est payante. Nous utiliserons la version gratuite qui est largement suffisante pour nous:
+        </p>
+        <figure class="figure_center">
+            <img src="./Images/VS.png" alt="Visual Studio 2010 Express">
+            <figcaption>Logo de Visual Studio 2010 Express.</figcaption>
+        </figure> 
+
+        
+        <p>
+            Il existe une implémentation libre du .NET qui regroupe une grande partie de ses technologies : Mono.
+            Il permet de faire tourner les programmes .NET sous Linux. 
+            Mono dispose même d'un IDE libre, MonoDevelop, qui permet de coder en C# sous Windows, Mac OS et Linux.
+        </p>
+        <figure class="figure_center">
+            <img src="./Images/Mono.png" alt="Mono">
+            <figcaption>Logo de Mono.</figcaption>
+        </figure> 
+        
+        <p>
+            Dans ce cours, nous utiliserons uniquement Visual Studio car la majorité des gens disposent de Windows et qu'à la base 
+            c'est l'IDE fait pour le .NET (il offre donc la possibilité de travailler avec toutes les technologies de cette plate-forme).
+        
+            <br>Voici un code minimal qui affiche "Hello World!" :
+        </p>
+        <pre> <code>          
+    using System;
+ 
+    class Program
+        {
+            public static void Main()
+                {
+                    Console.WriteLine("Hello World!");
+                }
+        }</code>         
+        </pre>
+    
+    </section>
+    <article>
+        <header> 
+            <h2 id="propr"> À propos de cette formation :</h2>
+        </header>
+            <p>
+                Ce tutoriel est écrit spécialement pour les débutants qui veulent découvrir le C#.                
+                Meme s'il y en a parmi vous qui connaissent déjà le C, le C++ ou Java,
+                cela pourra vous aider à apprendre plus rapidement, 
+                mais ce n'est absolument pas grave si vous n'avez jamais fait de programmation avant.
+                Ce tutoriel va entamer quelques bases de la programmation C# comme la declaration des variables
+                et enfin un test pour evaluer vos connaissances sur ce qui a ete aborder.
+                 
+            </p>    
+    </article>
+    <div class="startBtn"><a href="./HTML/Les_variables.html">Commencer la formation</a></div>
+</main>
+
+<aside class="aside">
+    <header><h2>Table des matières</h2></header>
+    <ol>
+        <li><a href="#top"><strong> &gt Accueil</strong></a></li>
+        <li><a href="./HTML/Les_variables.html"> 1.Les variables</a></li>
+        <li><a href="./HTML/Les_operateurs.html">2.Les operateurs</a></li>
+        <li><a href="./HTML/Conditions_boucles.html">3.Les conditions et boucles</a></li>
+        <li><a href="./HTML/Les_tableaux.html">4.Les tableaux</a></li>
+        <li><a href="./HTML/Quizz.html">5.Quizz</a></li>
+    </ol>
+
+</aside>
+</div>
+
+<footer class="footer"> 
+    <header><h3>Auteur:</h3></header>
+    <address>AMMAR BOUDJELAL Safi Eddine/ Mail: ammarboudjelal.safieddine@gmail.com</address>
+</footer>
+
+</body>
+</html>

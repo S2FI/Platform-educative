@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz - Apprenez le C#</title>
+    <link href="../CSS/test.Css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <script src="../JS/quiz.js"></script>
+
+            <fieldset id="f1">
+                <legend class="legend">Quizz de C#</legend>
+                <div>
+                    <p>
+                        Choisir la bonne reponse:
+                    </p>
+                    <div class="ligne">
+                        <p><strong>Question 1 </strong>: Comment declarer correctement une variable entier?</p>
+                                               
+                        <label  for ="rps1"> 
+                            <input type="radio" name="qst1" id="rps1">
+                            double nombre5;
+                        </label>
+                          
+                        <label  for ="rps2" >
+                            <input type="radio" name="qst1" id="rps2" >
+                             int 5nombre;
+                        </label>
+                        
+                        <label  for ="rps3" > 
+                            <input type="radio" name="qst1" id="rps3" > 
+                            int nombre5;
+                        </label>                                        
+                    </div>
+
+                                <!--Cacher et afficher apres l'envoi des responses-->
+                    
+                    <div id="rpsJuste1" class="juste" style="display: none;">    
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse1" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "int nombre5;" </p>
+                    </div>
+                    
+                    <div class="ligne">
+                        <p><strong>Question 2 </strong>: Quel est la correcte affectation? <p>
+                                                
+                        <label  for ="rps4"> 
+                            <input type="radio" name="qst2" id="rps4">
+                            double nombre =5.0; 
+                        </label>
+                       
+                        <label  for ="rps5" > 
+                            <input type="radio" name="qst2" id="rps5" > 
+                            double nombre;
+                            nombre =5.0;
+                        </label>
+                        
+                        <label  for ="rps6" > <input type="radio" name="qst2" id="rps6" > 
+                            les deux.
+                        </label>
+                                         
+                    </div>
+
+                    <div id="rpsJuste2" class="juste" style="display: none;">
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse2" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "les deux" </p>
+                    </div>
+
+                    <div class="ligne">
+                        <p><strong>Question 3</strong> : Donner le resultat i de la devision <code>int i=11/2;</code></p>
+                                               
+                        <label  for ="rps7"> 
+                            <input type="radio" name="qst3" id="rps7">
+                            i == 5
+                        </label>
+                        
+                        <label  for ="rps8" > 
+                            <input type="radio" name="qst3" id="rps8" >
+                            i == 5.5
+                        </label>
+                         
+                        <label  for ="rps9" > <input type="radio" name="qst3" id="rps9" >
+                            i == 6
+                        </label>
+                                         
+                    </div>
+                    
+                    <div id="rpsJuste3" class="juste" style="display: none;">
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse3" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "i == 5" </p>
+                    </div>
+
+                    <div class="ligne">
+                        <p><strong>Question 4 </strong>: Comment ecrir le raccourci de i=i-1;</p>
+                                                
+                        <label  for ="rps10"> 
+                            <input type="radio" name="qst4" id="rps10">
+                            i--;
+                        </label>
+                         
+                        <label  for ="rps11" > 
+                            <input type="radio" name="qst4" id="rps11" > 
+                            i=-1;
+                        </label>
+                        
+                        <label  for ="rps12" > 
+                            <input type="radio" name="qst4" id="rps12" >
+                            les deux.
+                        </label>
+                                         
+                    </div>
+
+                    <div id="rpsJuste4" class="juste" style="display: none;">
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse4" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "i--" </p>
+                    </div>
+
+                    <div class="ligne">
+                        <p><strong>Question 5</strong>: On peut mettre autant que else qu'on veut dans une condition</p>
+                                                
+                        <label  for ="rps13"> 
+                            <input type="radio" name="qst5" id="rps13">
+                            Oui.
+                        </label>
+                        
+                        <label  for ="rps14" > 
+                            <input type="radio" name="qst5" id="rps14" >  
+                            Non.
+                        </label>
+                          
+                        <label  for ="rps15" > 
+                            <input type="radio" name="qst5" id="rps15" >
+                            Pas plus que deux.
+                        </label>
+                                         
+                    </div>
+                    
+                    <div id="rpsJuste5" class="juste" style="display: none;">
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse5" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "Non" </p>
+                    </div>
+
+                    <div class="ligne">
+                        <p> <strong>Question 6 </strong>: Donner la valeur de i tel que i = 2;
+                            <pre>
+                                do
+                                    {
+                                        i=i+4;
+                                    }
+                                while (i>6);
+                            </pre>
+                        <p>
+                                                
+                        <label  for ="rps16"> 
+                            <input type="radio" name="qst6" id="rps16">
+                            i == 6
+                        </label>
+                         
+                        <label  for ="rps17" > 
+                            <input type="radio" name="qst6" id="rps17" > 
+                            i == 2
+                        </label>
+                         
+                        <label  for ="rps18" > 
+                            <input type="radio" name="qst6" id="rps18" >
+                            boucle infini.
+                        </label>
+                                         
+                    </div>
+                    
+                    <div id="rpsJuste6" class="juste" style="display: none;">
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse6" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "i==6" </p>
+                    </div>
+
+                    <div class="ligne">
+                        <p><strong>Question 7 </strong>: Donner le resultat de tab[4] d'apres la table suivante 
+                            <code>int[] tab = new int[] {7, 2, 14, 78,61};</code>
+                        </p>
+                                               
+                        <label  for ="rps19"> 
+                            <input type="radio" name="qst7" id="rps19">
+                            tab[4] == 78
+                        </label>
+                
+                        <label  for ="rps20" > <input type="radio" name="qst7" id="rps20" >
+                           inaccessible! depasser la taille de table!!
+                        </label>
+                          
+                        <label  for ="rps21" > 
+                            <input type="radio" name="qst7" id="rps21" >
+                            tab[4] == 61
+                        </label>
+                                         
+                    </div>
+                    
+                    <div id="rpsJuste7" class="juste" style="display: none;">
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse7" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "tab[4] == 61" </p>
+                    </div>
+
+                    <div class="ligne">
+                        <p><strong>Question 8 </strong>: Comment declarer une matrice?</p>
+                                               
+                        <label  for ="rp22"> 
+                            <input type="radio" name="qst8" id="rps22">
+                            double[][] myArray = new double[5][5];
+                        </label>
+                         
+                        <label  for ="rps23" > <input type="radio" name="qst8" id="rps23" > 
+                            double[,] myArray = new double[5,5];
+                        </label>
+                          
+                        <label  for ="rps24" > 
+                            <input type="radio" name="qst8" id="rps24" >
+                            double myArray[5][5];
+                        </label>
+                                         
+                    </div>
+                    
+                    <div id="rpsJuste8" class="juste" style="display: none;">
+                        <p > Bonne reponse</p>
+                    </div>
+                    <div id="rpsFausse8" class="fausse" style="display: none;">
+                        <p >Faux!! la bonne reponse est : "double[,] myArray = new double[5,5];" </p>
+                    </div>
+                    
+                    
+                    <div id="note" class="noteT" style="display: none;"> 
+                        Votre note est :<span id="resultat" class="rslt"></span>
+                    </div>
+                    
+                </div>
+            </fieldset>
+
+            <button class="button" id="envoyer" onclick="showResult()">Envoyer</a></button>
+
+            <a href="../index.html"> <i class="arrow left"></i>Return</a>
+                            
+    </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les conditions et les boucles - Apprenez le C#</title>
+    <link href="../CSS/Main.CSS" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Les conditions et les boucles conditionnelles du langage C#</h1>
+</header>
+<nav>
+    <ul>
+        <li><p>Apprenez le C#</p></li>
+        <li class="niveau2"><a href="#cnd">Les conditions</a>
+            <ul>
+                <div class="content-niveau2">
+                    <li>
+                        <a href="#if">If conditionelles</a>
+                        <a href="#elseif">Else if</a>
+                        <a href="#else">Else</a>
+                        <a href="#switch">Switch</a>
+                    </li>
+                </div>
+            </ul>
+        </li>
+        <li class="niveau2"><a href="#bcl">Les boucles</a>
+            <ul>
+                <div class="content-niveau2">  
+                    <li>
+                        <a href="#while">While</a>
+                        <a href="#dowhile">do..while</a>
+                        <a href="#for">For</a>
+                    </li>
+                </div>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="content">
+<main class="main">
+    <ol> <!-- Liste des grandes titres-->
+        <section>
+            <header> 
+                <li><h2 id="cnd"> Les conditions :</h2></li>
+            </header>
+            <p>
+                Dans un programme, tout le code ne s'exécute pas forcément. 
+                Vous pouvez faire s'exécuter certaines parties du code si des conditions sont remplies.
+            </p>
+            <ol> <!--Debut des sous listes du titre Les conditions-->
+                <section>
+                    <header> 
+                        <li><h3 id="if"> If conditionelles :</h3></li>
+                    </header>
+                    <p>
+
+                        "if" est un mot anglais qui signifie "si".
+                        C'est un mot-clef du langage C# qui permet de n'effectuer du code que dans certaines conditions.
+                        La syntaxe est la suivante :
+                        
+                        <pre>
+                            <code>
+    if (condition)
+        {
+            // Code à exécuter si 
+            //la condition est satisfaite.
+        }
+                            </code>
+                        </pre>
+                        <strong>condition</strong> est une expression qui retourne un booléen : soit true, soit false :
+                        <ul>
+                        
+                            <li>true : le code entre les accolades est exécuté.</li>
+                        
+                            <li> false : le code entre les accolades n'est pas exécuté.</li>                 
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <header> 
+                    <li><h3 id="elseif"> else if :</h3></li>
+                    </header>
+                    <p>
+                        "else if" veut dire "sinon, si".
+                        Placé après un if, il permet d'exécuter du code qui ne remplit pas la première condition,
+                        mais la deuxième.
+                        <br>La syntaxe est la suivante :
+                        <pre>
+                            <code>
+    if (condition1)
+        {
+            //Code à exécuter si 
+            la condition est satisfaite.
+        }
+        else if (condition2)
+            {
+                //Code à exécuter si 
+                la première condition 
+                n'est pas satisfaite
+                mais que la deuxième l'est.
+            }
+                            </code>
+                        </pre>
+                        Vous pouvez mettre autant de <strong>else if</strong> que vous voulez.
+                    </p>
+
+                </section>
+
+                <section>
+                    <header> 
+                    <li><h3 id="else"> else :</h3></li>
+                    </header>
+                    <p>
+                        "else" signifie "sinon". Placé après un if simple, 
+                        ou un if et un (ou plusieurs) else if, 
+                        il permet d'exécuter le code qui ne satisfait aucune condition précédente.
+                        <br>La syntaxe est la suivante :
+                        <pre>
+                            <code>
+    if (condition)
+        {
+            //Code à exécuter si 
+            la condition est satisfaite.
+        }
+        else
+            {
+                //Code à exécuter si 
+                la première condition 
+                n'est pas satisfaite.
+            }
+                            </code>
+                        </pre>
+                        Les trois expressions peuvent se combiner.
+                    </p>
+
+                </section>
+
+                <section>
+                    <header> 
+                    <li><h3 id="switch"> switch : un if spécial :</h3></li>
+                    </header>
+                    <p>
+                        Il permet de remplacer if et sa famille pour étudier l'égalité de plusieurs termes.
+
+                        <br>Voici un exemple avec if où level est un entier :
+                        <pre>
+                            <code>
+    if (level == 1)
+        {
+	        // niveau 1
+        }
+        else if (level == 2)
+            {
+	            // niveau 2
+            }
+        else
+            {
+	            // autre niveau
+            }
+                            </code>
+                        </pre>
+                        Voici ce que ça donne avec switch :
+                        <pre>
+                            <code>
+    switch (level)
+        {
+            case 1:
+                {
+                    // niveau 1
+                }
+                break;
+
+            case 2:
+                {
+                    // niveau 2
+                }
+                break;
+
+                default:
+                    {
+                        // autre niveau
+                    }
+                    break;
+        }
+                            </code>
+                        </pre>
+                        Là-aussi, vous pouvez mettre autant de case que vous voulez.
+
+                        <br>Les break servent à clôturer les case :
+                         si vous n'en mettez pas, le code du case suivant sera aussi exécuté. 
+                         Par contre le break est obligatoire dès qu'un bloc case contient du code.
+                        default est le cas par défaut. Il est exécuté seulement si aucun case ne convient.
+                    </p>
+
+                </section>
+            </ol> <!--Fin des sous listes-->
+        </section>
+        <section>
+            <header> 
+                <li><h2 id="bcl"> Les boucles :</h2></li>
+            </header>
+            <ol><!--Debut des sous listes du titre boucles-->
+                <p>
+                    Les boucles conditionnelles permettent de répéter des actions tant que certaines conditions sont satisfaites.
+                    Dès lors que ces dernières ne le sont plus, le programme "sort de la boucle" et exécute le code qui suit.
+                </p>
+                <section>
+                    <header> 
+                        <li><h3 id="while">while :</h3></li>
+                    </header>
+                    <p>
+                        "while" veut dire "tant que".
+                        <br>La syntaxe est :
+
+
+                        <pre>
+                            <code>
+    while (condition)
+        {
+            //Code qui s'exécute 
+            tant que la condition est satisfaite.
+        }
+                            </code>
+                        </pre>
+                        Il peut arriver que vous ayez besoin de sortir prématurément d'un boucle. Pour ce faire, utilisez break. 
+                    </p>
+
+                </section>
+
+                <section>
+                    <header> <li><h3 id="dowhile">do ... while :</h3></li></header>
+                    <p>
+                        L'équivalent français serait "fait ... tant que". 
+                        Cela permet d'exécuter les instructions une première fois obligatoirement, et de répéter l'exécution si besoin est.
+                        <br>La syntaxe est :
+
+
+                        <pre>
+                            <code>
+    do
+        {
+	        // Code qui s'exécute 
+            une 1ère fois obligatoirement 
+            ensuite en boucle tant 
+            que la condition est satisfaite.
+        }
+        while (condition);
+                            </code>
+                        </pre>
+                        Vous pouvez là encore utiliser break au sein du bloc délimité par les accolades. 
+                    </p>
+
+                </section>
+                <section>
+                    <header> <li><h3 id="for">for:</h3></li></header>
+                    <p>
+                        C'est un while compact.
+
+                        <br>Regardez ce que devient notre compte à rebours avec for :
+                        <pre>
+                            <code>
+    int i;
+    for (i = 100; i > 0; i--)
+        {
+        }
+                            </code>
+                        </pre>
+                        On peut tout aussi bien écrire :
+                        <pre>    
+                            <code>                        
+    for (int i = 100; i > 0; i--)
+        {
+        }
+                            </code>
+                        </pre>
+                        Dans ce cas, étant donné que i est déclaré dans le for, il ne sera accessible qu'entre ces deux accolades.
+                        En effet, une variable déclarée dans un bloc 
+                        (ce qui est délimité par deux accolades) est uniquement accessible à l'intérieur de ce bloc.
+                        Ainsi, si je crée un entier à l'intérieur d'un bloc if, cet entier ne sera utilisable que dans ce if.
+                    </p>
+
+                </section>
+            
+            </ol><!--Fin des sous listes du titre Utilisation-->
+        </section>
+
+
+        <a href="./Les_operateurs.html" class="backBtn"><i class="arrow left"></i>Les operateurs</a>
+        <a href="./Les_tableaux.html" class="nextBtn">Les tableaux <i class="arrow right"></i> </a>
+
+
+    </ol><!--Fin des listes des grands titre -->
+</main> 
+<aside class="aside">
+    <header><h2>Table des matières</h2></header>
+    <ol>
+        <li><a href="../index.html">  Accueil</a></li>
+        <li><a href="./Les_variables.html">1.Les variables</a></li>
+        <li><a href="./Les_operateurs.html">2.Les operateurs</a></li>
+        <li><a href="./Conditions_boucles.html"><strong> &gt 3.Les conditions et boucles</strong></a></li>
+        <li><a href="./Les_tableaux.html">4.Les tableaux</a></li>
+        <li><a href="./Quizz.html">5.Quizz</a></li>
+    </ol>
+
+</aside>
+</div>
+<footer class="footer"> 
+    <header><h3>Auteur:</h3></header>
+    <address>AMMAR BOUDJELAL Safi Eddine/ Mail: ammarboudjelal.safieddine@gmail.com</address>
+</footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les opérateurs - Apprenez le C#</title>
+    <link href="../CSS/Main.CSS" rel="stylesheet">
+</head>
+<style>                     /* unique a cette page */
+    code{
+        display: block;
+    }
+</style>
+<body>
+<header>
+    <h1>Les opérateurs du langage C#</h1>
+</header>
+<nav>
+    <ul>
+        <li><p>Apprenez le C#</p></li>
+        <li><a href="#opmath">Les opérateurs mathématiques</a></li>
+        <li><a href="#oplog">Les opérateurs logiques</a></li>
+        <li><a href="#atrop">Autres opérateurs</a></li>
+        
+    </ul>
+</nav>
+
+<div class="content">
+<main class="main">
+    <section>
+        <header> 
+            <h2> Les opérateurs</h2>
+        </header>
+        <p>
+            Dans la quasi-totalité des cas, les opérateurs servent à effectuer des opérations avec des variables qui sont de même type.
+
+            <br>Par exemple, comment voulez-vous comparer une image et un nombre ? Ce n'est pas faisable, nous sommes d'accord.
+     
+        </p>
+    
+        <ol>
+            <section>
+                <header> 
+                    <li><h3 id="opmath"> 1.Les opérateurs mathématiques </h3></li>
+                </header>
+                <p>
+                    Ils s'utilisent sur des variables qui représentent en général des nombres.
+                    <ul>
+                        <li><h4>Le + :</h4></li>
+                            Il sert à additionner deux nombres.
+
+                            <code>int myInt = 1 + 1;</code>
+                            <br>Après exécution, myInt vaut 2.
+
+                            <br>Il peut aussi servir pour des chaînes de caractères :
+
+                            <code>string s = "deux " + "mots";</code>
+                            <br>Après exécution, s vaut "deux mots".
+
+                            <br>Dans le code: <code>string s = "nombre converti en chaîne de caractères : " + 4;</code>
+                            le nombre 4 est automatiquement converti en une chaîne de caractères qui est mise à la suite de la 1ère.
+
+                        <li><h4>Le - :</h4></li>
+                            Il sert à effectuer une soustraction.
+
+                            <code>int myInt = 3 - 4;</code>
+                            <br>Après exécution, myInt vaut -1.
+
+                            <br>Cela n'aurait pas marché avec un uint car un uint n'est pas signé : il est forcément positif.
+
+                        <li><h4>Le * :</h4></li>
+                            Il sert à effectuer une multiplication.
+
+                            <code>int myInt = 2 * 3;</code>
+                            <br>Après exécution, myInt vaut 6.
+
+                        <li><h4>Le / :</h4></li>
+                            Il sert à effectuer une division.
+
+                            <br>Si les deux opérandes sont des entiers, le résultat est le quotient entier.
+
+                            <code>int myInt = 5 / 2;</code>
+                            <br>Ainsi, après exécution, myInt vaut 2.
+
+                            <code>double d = 5.0 / 2;</code>
+                            <br>Après exécution, d vaut 2.5. Le fait d'avoir mis un point (qui correspond en français à une virgule) indique que l'on ne veut pas traiter avec des entiers. 2 est bien un entier mais est, ici, automatiquement converti pour que l'opération fonctionne.
+
+                        <li><h4>Le % :</h4></li>
+                            Il permet d'obtenir le reste d'une division euclidienne : si a = b*q + r, avec 0 <= r < q, alors a % b vaut r.
+
+                            <code> int myInt = 21 % 10;</code>
+                            <br>Après exécution, myInt vaut 1 car 21 = 2*10 + 1.
+
+                            Comme dit précédemment, vous n'êtes pas obligés d'utiliser des valeurs fixées. Vous pouvez donc écrire :
+                            <pre>
+                                <code>
+    int i = 5;
+    int j = i + 7;
+                                </code>
+                            </pre>
+                            Après exécution, i vaut 5 et j vaut 5 + 7 = 12.
+
+                        <li><h4>Simplifications d'écriture</h4></li>
+                            Il est possible (et préférable) d'écrire : 
+                            <code>
+                                <br>i += 5; à la place de i = i + 5;<br>
+
+                                i -= 5; à la place de i = i - 5;<br>
+
+                                i *= 5; à la place de i = i * 5;<br>
+
+                                i /= 5; à la place de i = i / 5;<br>
+
+                                i %= 5; à la place de i = i % 5;<br>
+                            </code>
+                            Pour simplifier au maximum votre code, plutôt que d'écrire i = i + 1; ou i += 1; écrivez i++;
+
+                            Cette simplification n'est valable que pour les opérateurs + et - (i--; à la place de i -= 1;).
+
+                        <li><h4>Priorités des opérateurs</h4></li>
+                            + et - ont une priorité rigoureusement identique et sont évalués dans l'ordre d'apparition
+                            (il en va de même pour * et /, qui en plus sont prioritaires devant + et -). 
+                            Dans le doute, mettez des parenthèses pour être sûrs des priorités.
+                            Pensez aussi à ceux qui vous reliront peut-être : codez de façon claire.
+                    </ul>
+                </p>
+            </section>
+
+            <section>
+                <header> 
+                    <li><h3 id="oplog">2.Les opérateurs logiques </h3></li>
+                </header>
+                <p>
+                    En électronique, ils permettent de comparer deux bits ensemble. Un bit vaut soit 0 (pas de tension) soit 1 (présence de tension).
+
+                    <br>En C#, ils permettent de comparer deux booléens. 
+                    Le terme "booléen" vient de George Boole, mathématicien anglais à qui on doit l'algèbre de Boole : 
+                    théories mathématiques sur les comparaisons d'assertions (une assertion est une proposition pouvant être soit vraie, soit fausse).
+                    
+                    <br>En termes binaires:<br>
+                    0 correspond à false (faux)<br>
+                    1 correspond à true (vrai)<br>
+                    
+                    Les opérateurs sont représentés par des symboles (ici entre parenthèses). Dans le code vous devez impérativement utiliser les symboles et non pas le nom des opérateurs.
+                <ul>
+                    <li><h4>NOT (!):</h4></li>
+                        Le résultat est l'inverse de l'opérande.
+                        <br>Ce qui donne en notation binaire :
+                        <code>!0 = 1</code>
+                        <code>!1 = 0</code>
+
+                    <li><h4>AND (&&):</h4></li>
+                        Les deux opérandes doivent valoir true pour que le résultat soit true.
+                        <code>0 AND 0 = 0</code>
+                        <code>0 AND 1 = 0</code>
+                        <code>1 AND 0 = 0</code>
+                        <code>1 AND 1 = 1</code>
+
+                    <li><h4>OR (||):</h4></li>
+                        Un au moins des deux opérandes doit valoir true pour que le résultat soit true.
+                        <code>0 OR 0 = 0</code>
+                        <code>0 OR 1 = 1</code>
+                        <code>1 OR 0 = 1</code>
+                        <code>1 OR 1 = 1</code>
+
+                    <li><h4>XOR (^):</h4></li>
+                        C'est un ou exclusif : pareil que pour OR mais si les deux sont true, le résultat sera false.
+                        <code>0 XOR 0 = 0</code>
+                        <code>0 XOR 1 = 1</code>
+                        <code>1 XOR 0 = 1</code>
+                        <code>1 XOR 1 = 0</code>
+                </ul>
+                </p>
+        
+            </section>
+
+            <section>
+                <header> 
+                    <li><h3 id="atrop">3.Autres opérateurs </h3></li>
+                </header>
+                <p>
+                <ul>
+                    <li><h4>Le =:</h4></li>
+                            La syntaxe est : <code>variableÀModifier = nouvelleValeurDeLaVariable;</code>
+                            Par exemple, si myInt est un entier, l'instruction myInt = 2;
+                            remplace la valeur existante de myInt par 2.
+                            <br>Pour faire une assignation (=affectation), on peut aussi utiliser une autre variable ;
+                            la syntaxe est alors : <code>variableÀModifier = nouvelleValeurDeLaVariable;</code>
+
+                            <strong>Il faut que les deux variables soient de même type.</strong>
+
+                    <li><h4>Opérateur ==:</h4></li>
+                        Il retourne true si les deux opérandes sont égaux et false si ce n'est pas le cas.
+                        <code>bool numbersAreEqual = (2 == 5);</code>
+                        2 n'est pas égal à 5 donc après exécution numbersAreEqual vaut false.
+
+                    <li><h4>Opérateur !=:</h4></li>
+                    Il retourne true si les deux opérandes sont différents et false si ce n'est pas le cas.
+
+                    <code>bool numbersAreDifferent = (2 != 5);</code>
+                    2 n'est pas égal à 5 donc après exécution numbersAreDifferent vaut true.
+
+                    <li><h4>Opérateurs d'inégalités:</h4></li>
+                    Vous les connaissez, ce sont des opérateurs mathématiques simples :
+
+                    <code>&lt (inférieur)</code>
+                    
+                    <code>&lt= (inférieur ou égal)</code>
+                    
+                    <code>&gt (supérieur)</code>
+                    
+                    <code>&gt= (supérieur ou égal)</code>
+                    <li><h4>L'opérateur ternaire "?":</h4></li>
+                    Il s'utilise de cette façon : a ? b : c;.
+                    a doit être une expression conditionnelle (qui retourne true ou false). À l'exécution, cette expression est évaluée.
+                    <br>Si elle vaut true, l'expression b sera exécutée et son résultat sera retourné ; l'expression c sera ignorée.
+                    <br>Si elle vaut false, l'expression c sera exécutée et son résultat sera retourné ; l'expression b sera ignorée.
+                    
+                    <br>Voici un exemple :
+                    
+                    <code>string myString = (2 == 5) ? "les nombres sont égaux" : "les nombres ne sont pas égaux";</code>
+                    Après exécution, myString vaut "les nombres ne sont pas égaux" car (2 == 5) a retourné false.
+                </ul>
+                </p>
+            
+            </section>
+        </ol>
+    </section>
+    <div><a href="./Les_variables.html" class="backBtn"> <i class="arrow left"></i> Les variables</a></div>
+    <div><a href="./Conditions_boucles.html" class="nextBtn">Les conditions et les boucles <i class="arrow right"></i></a></div>
+</main> 
+<aside class="aside">
+    <header><h2>Table des matières</h2></header>
+    <ol>
+        <li><a href="../index.html">  Accueil</a></li>
+        <li><a href="./Les_variables.html">1.Les variables</a></li>
+        <li><a href="./Les_operateurs.html"> <strong> &gt 2.Les operateurs</strong></a></li>
+        <li><a href="./Conditions_boucles.html">3.Les conditions et boucles</a></li>
+        <li><a href="./Les_tableaux.html">4.Les tableaux</a></li>
+        <li><a href="./Quizz.html">5.Quizz</a></li>
+    </ol>
+
+</aside>
+</div>
+<footer class="footer"> 
+    <header><h3>Auteur:</h3></header>
+    <address>AMMAR BOUDJELAL Safi Eddine/ Mail: ammarboudjelal.safieddine@gmail.com</address>
+</footer>
+</body>
+</html>
